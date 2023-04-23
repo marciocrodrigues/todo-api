@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Todo.Domain.Application.Handlers;
+using Todo.Domain.Application.Services;
+using Todo.Domain.Application.Services.Contracts;
 using Todo.Domain.Infra.Contexts;
 using Todo.Domain.Infra.Repositories;
 using Todo.Domain.Repositories;
@@ -60,6 +62,7 @@ namespace Todo.Domain.Api.Extensions
         {
             service.AddScoped<ITodoRepository, TodoRepository>();
             service.AddScoped<TodoHandler, TodoHandler>();
+            service.AddScoped<ITodoService, TodoService>();
             return service;
         }
 

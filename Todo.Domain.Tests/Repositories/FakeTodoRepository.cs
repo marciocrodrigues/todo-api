@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Linq.Expressions;
-using Todo.Domain.Application.Queries;
+﻿using System.Linq.Expressions;
 using Todo.Domain.Entities;
 using Todo.Domain.Repositories;
 
