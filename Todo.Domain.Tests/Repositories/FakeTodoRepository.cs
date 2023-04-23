@@ -13,6 +13,12 @@ namespace Todo.Domain.Tests.Repositories
             await Task.FromResult(todo);
         }
 
+        public async Task<TodoItem> GetById(Guid id, string user)
+        {
+            var todo = todos.FirstOrDefault(x => x.Id == id && x.User == user);
+            return await Task.FromResult(todo);
+        }
+
         public async Task Update(TodoItem todo)
         {
             var index = todos.FindIndex(x => x.Id == todo.Id);

@@ -6,5 +6,7 @@ namespace Todo.Domain.Repositories
     {
         Task Create(TodoItem todo);
         Task Update(TodoItem todo);
+
+        Task<TodoItem> GetById(Guid id, string user);
     }
 }
